@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-warning">
+  
+  <div class="container py-5">
+    <button class="btn btn-sm btn-primary js-btn mb-4" type="button">Submit</button>
+    <div class="row js-news-list"></div>
+  </div>
+
+  <template id="news-template">
+    <div class="mb-4 col-md-4 col-lg-3 ">
+      <div class="bg-white shadow-lg rounded p-2 h-100">
+        <img class="img-fluid rounded news-img" height="150"
+        src="http://resources.finance.ua/ru/news/image-repost?id=500680"
+        alt="" width="">
+        <div class="py-3 px-2">
+          <h3 class="news-title h6"></h3>
+          <div class="d-flex flex-column text-decoration-none text-white">
+            <p class="news-author"></p>
+            <a class="news-link text-decoration-none text-white btn btn-sm btn-primary" href="" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="js/bootstrap5.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
