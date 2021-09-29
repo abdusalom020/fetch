@@ -12,22 +12,21 @@
   
   <div class="container py-5">
     <h1 class="display-3 text-center fw-bold text-white mb-5">Lenta.ru</h1>
-    <button class="btn btn-sm btn-primary js-btn mb-4" type="button">Submit</button>
+    <form class="js-news-form d-flex align-items-center mb-3" action="https://echo.htmlacademy.ru" method="GET">
+      <input class="form-control js-news-input" type="text" name="text" placeholder="Search News" required>
+      <button class="btn btn-primary ms-3 js-btn" type="submit">Submit</button>
+    </form>
     <div class="row js-news-list"></div>
   </div>
 
   <template id="news-template">
     <div class="mb-4 col-md-4 col-lg-3 ">
-      <div class="bg-white shadow-lg rounded p-2 h-100">
-        <img class="img-fluid rounded news-img" height="150"
-        src="http://resources.finance.ua/ru/news/image-repost?id=500680"
-        alt="" width="">
-        <div class="py-3 px-2">
-          <h3 class="news-title h6"></h3>
-          <div class="d-flex flex-column text-decoration-none text-white">
-            <p class="news-author"></p>
-            <a class="news-link text-decoration-none text-white btn btn-sm btn-primary" href="" target="_blank"></a>
-          </div>
+      <div class="bg-white shadow-lg rounded p-2 h-100 d-flex flex-column">
+        <img class="img-fluid rounded news-img" src="http://resources.finance.ua/ru/news/image-repost?id=500680"
+        alt="photo" width="200">
+        <div class="py-3 px-2 d-flex flex-column justify-content-between">
+          <h3 class="news-title h6 mb-3"></h3>
+          <a class="news-link text-decoration-none text-white btn btn-sm btn-primary mt-auto" href="" target="_blank"></a>
         </div>
       </div>
     </div>

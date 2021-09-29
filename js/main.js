@@ -1,10 +1,12 @@
-const elLoadDataBtn = document.querySelector('.js-btn');
+const elNewsForm = document.querySelector('.js-news-form');
+const elNewsInput = document.querySelector(".js-news-input");
 const elNewsList = document.querySelector(".js-news-list");
 
 const elNewsTemplate = document.querySelector("#news-template").content;
 
-elLoadDataBtn.addEventListener('click', () => {
-  fetch('https://newsapi.org/v2/everything?qInTitle=apple&language=ru&apiKey=94d05747d7344d7391264e6dacae98ad')
+elNewsForm.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  fetch(`https://newsapi.org/v2/everything?qInTitle=${elNewsInput.value}&apiKey=94d05747d7344d7391264e6dacae98ad`)
   .then(response => response.json())
   .then(data => {
     if (data.status === 'ok') {
